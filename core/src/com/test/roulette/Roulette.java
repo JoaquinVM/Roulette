@@ -22,6 +22,7 @@ public class Roulette extends Actor{
         this.optionsNumber = optionsNumber;
         this.radius = radius;
         colors = new ArrayList<Color>(optionsNumber);
+
     }
 
     public void setOptionsNumber(int optionsNumber) {
