@@ -7,15 +7,11 @@ import com.badlogic.gdx.graphics.g2d.BitmapFont;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.scenes.scene2d.Stage;
 
-/**
- * Created by Joaco99 on 22/07/2017.
- */
-
 public class GameScreen extends ScreenAdapter {
 
-    Stage stage;
-    SpriteBatch batch;
-    BitmapFont font;
+    private Stage stage;
+    private SpriteBatch batch;
+    private BitmapFont font;
 
     @Override
     public void show() {
