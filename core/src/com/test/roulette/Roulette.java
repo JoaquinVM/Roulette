@@ -1,13 +1,9 @@
 package com.test.roulette;
 
-import com.badlogic.gdx.Game;
+/**
+ * Created by Joaco99 on 22/07/2017.
+ */
 
-public class Roulette extends Game {
-
-    @Override
-    public void create() {
-        setScreen(new GameScreen());
-    }
-
+public class Roulette {
 
 }
