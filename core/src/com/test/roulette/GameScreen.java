@@ -19,6 +19,7 @@ public class GameScreen extends ScreenAdapter {
     SpriteBatch batch;
     BitmapFont font;
     private ShapeRenderer renderer;
+    private Roulette roulette;
 
     @Override
     public void show() {
@@ -26,20 +27,28 @@ public class GameScreen extends ScreenAdapter {
         batch = new SpriteBatch();
         font = new BitmapFont();
         renderer = new ShapeRenderer();
+        roulette = new Roulette(5, 200);
 
+        roulette.addColor(Color.GREEN);
+        roulette.addColor(Color.RED);
+        roulette.addColor(Color.YELLOW);
+        roulette.addColor(Color.BLUE);
+        roulette.addColor(Color.OLIVE);
+
+        Gdx.gl.glLineWidth(4);
         stage.getViewport().setWorldSize(Constants.WORLD_WIDTH, Constants.WORLD_HEIGHT);
     }
 
     @Override
     public void render(float delta) {
+        Gdx.gl.glClearColor(1, 1, 1, 1);
         Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT);
         stage.act();
 
         renderer.begin(ShapeRenderer.ShapeType.Line);
-        renderer.setColor(Color.RED);
-        renderer.arc(200, 200, 100, 0, 180, 100);
-        renderer.setColor(Color.GREEN);
-        renderer.arc(200, 200, 100, 180, 180, 100);
+        renderer.setAutoShapeType(true);
+
+        roulette.render(renderer);
         renderer.end();
 
         batch.begin();
