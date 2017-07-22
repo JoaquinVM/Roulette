@@ -22,6 +22,8 @@ public class GameScreen extends ScreenAdapter {
         stage = new Stage();
         batch = new SpriteBatch();
         font = new BitmapFont();
+
+        stage.getViewport().setWorldSize(Constants.WORLD_WIDTH, Constants.WORLD_HEIGHT);
     }
 
     @Override
