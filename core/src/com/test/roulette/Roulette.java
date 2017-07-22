@@ -6,4 +6,13 @@ package com.test.roulette;
 
 public class Roulette {
 
+    private int optionsNumber;
+
+    public Roulette() {
+        optionsNumber = 0;
+    }
+
+    public void setOptionsNumber(int optionsNumber) {
+        this.optionsNumber = optionsNumber;
+    }
 }
