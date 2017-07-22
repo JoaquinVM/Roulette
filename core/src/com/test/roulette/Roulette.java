@@ -11,7 +11,6 @@ public class Roulette extends Game {
 	
 	@Override
 	public void create () {
+		setScreen(new GameScreen());
 	}
-
-
 }
