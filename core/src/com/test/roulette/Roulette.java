@@ -15,9 +15,14 @@ public class Roulette {
 
     public Roulette() {
         optionsNumber = 0;
+        colors = new ArrayList<Color>(optionsNumber);
     }
 
     public void setOptionsNumber(int optionsNumber) {
         this.optionsNumber = optionsNumber;
+    }
+
+    public void render(){
+
     }
 }
