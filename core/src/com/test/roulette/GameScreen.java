@@ -44,7 +44,7 @@ public class GameScreen extends ScreenAdapter {
         renderer.begin(ShapeRenderer.ShapeType.Line);
         renderer.setAutoShapeType(true);
 
-        roulette.render(renderer);
+        roulette.render(renderer, delta);
         renderer.end();
 
         batch.begin();
